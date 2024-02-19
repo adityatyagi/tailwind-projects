@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACME Rockets</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <!-- header -->
     <header class="sticky top-0 z-10 bg-teal-700 text-white">
+
+
+      <!-- Desktop Menu bar with Menu and Logo -->
       <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <!-- Company Logo -->
         <h1 class="text-3xl font-medium">
           <a href="#hero"> 🚀 ACME Rockets</a>
         </h1>
+
+        <!-- Desktop Header Menu with the button to open mobile menu which will be hidden on desktop and will only be visible for tablets and mobile -->
         <div>
           <button
-            id="mobile-open-button"
-            class="text-3xl focus:outline-none sm:hidden"
+            id="hamburger-button"
+            class="text-3xl cursor-pointer md:hidden"
+            onclick=""
           >
             &#9776;
           </button>
-          <nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+          <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
             <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
             <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
             <a href="#contact" class="hover:opacity-90">Contact Us</a>
           </nav>
         </div>
+      </section>
+
+      <!--Mobile Menu-->
+      <section id="mobile-menu" class="absolute top-0 bg-black w-full text-5xl flex-col justify-center hidden origin-top animate-open-menu ">
+        <button class="text-8xl self-end px-6">&times;</button>
+        <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-90">Home</a>
+          <a href="#rockets" class="w-full text-center py-6 hover:opacity-90">Our Rockets</a>
+          <a href="#testimonials" class="w-full text-center py-6 hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="w-full text-center py-6 hover:opacity-90">Contact Us</a>
+        </nav>
       </section>
     </header>
 
