@@ -150,7 +150,58 @@ export default function Home() {
             </div>
 
             {/* Variants of the car images */}
-            <div>Different Car images</div>
+            <div className="text-center">
+              <ul className="flex w-fit gap-4">
+                <li>
+                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                    <Image
+                      src="/images/car.png"
+                      fill={true}
+                      style={{
+                        objectFit: "contain",
+                      }}
+                      alt="preview"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                    <Image
+                      src="/images/car.png"
+                      fill={true}
+                      style={{
+                        objectFit: "contain",
+                      }}
+                      alt="preview"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                    <Image
+                      src="/images/car.png"
+                      fill={true}
+                      style={{
+                        objectFit: "contain",
+                      }}
+                      alt="preview"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                    <Image
+                      src="/images/car.png"
+                      fill={true}
+                      style={{
+                        objectFit: "contain",
+                      }}
+                      alt="preview"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
