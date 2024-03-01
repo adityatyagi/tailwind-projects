@@ -8,6 +8,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function Home() {
   return (
     <>
@@ -16,7 +24,7 @@ export default function Home() {
         {/* Desktop Menu */}
         <section className="flex justify-between">
           {/* Left */}
-          <div className="flex gap-8">
+          <div className="flex items-center gap-8">
             {/* Site branding */}
             <Link href="#">
               <Image
@@ -57,7 +65,47 @@ export default function Home() {
           </div>
 
           {/* Right */}
-          <div className="flex gap-8">Right</div>
+          {/*TODO: https://www.npmjs.com/package/react-flags-select */}
+          <div className="flex items-center gap-8">
+            {/* Select Language */}
+            <Select defaultValue="sg">
+              <SelectTrigger className="w-[76px]" aria-label="language">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="india">
+                  <Image
+                    src="/images/flags/in.svg"
+                    width={28}
+                    height={18}
+                    alt="Flag"
+                    className="border-2"
+                  ></Image>
+                </SelectItem>
+                <SelectItem value="sg">
+                  <Image
+                    src="/images/flags/sg.svg"
+                    width={28}
+                    height={18}
+                    alt="Flag"
+                    className="border-2"
+                  ></Image>
+                </SelectItem>
+                <SelectItem value="ae">
+                  <Image
+                    src="/images/flags/ae.svg"
+                    width={28}
+                    height={18}
+                    alt="Flag"
+                    className="border-2"
+                  ></Image>
+                </SelectItem>
+              </SelectContent>
+            </Select>
+            <Link href="#" className="font-bold">
+              Log In / Sign Up
+            </Link>
+          </div>
         </section>
       </header>
       {/* <main>
