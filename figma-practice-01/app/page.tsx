@@ -117,7 +117,7 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="container mt-16 flex">
+      <main className="container mt-16 flex bg-[#FBFCFE]">
         {/* Car Carousel */}
         <section className="max-w-[942px] basis-3/5">
           {/* Carousel */}
@@ -126,7 +126,7 @@ export default function Home() {
             <div className="mb-16 flex items-center gap-12">
               {/* Navigation Left */}
               <div>
-                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all duration-200 hover:bg-[#0036C3] hover:opacity-85">
+                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all hover:bg-[#0036C3] hover:opacity-85">
                   <MoveLeft className="text-[#0036C3] hover:text-[#DDFFF7]" />
                 </button>
               </div>
@@ -143,7 +143,7 @@ export default function Home() {
 
               {/* Navigation Right */}
               <div>
-                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all duration-200 hover:bg-[#0036C3] hover:opacity-85">
+                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all hover:bg-[#0036C3] hover:opacity-85">
                   <MoveRight className="text-[#0036C3] hover:text-[#DDFFF7]" />
                 </button>
               </div>
@@ -153,7 +153,7 @@ export default function Home() {
             <div className="text-center">
               <ul className="flex w-fit gap-4">
                 <li>
-                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                  <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
                     <Image
                       src="/images/car.png"
                       fill={true}
@@ -165,7 +165,7 @@ export default function Home() {
                   </button>
                 </li>
                 <li>
-                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2 border-[#00F3B9]">
                     <Image
                       src="/images/car.png"
                       fill={true}
@@ -177,7 +177,7 @@ export default function Home() {
                   </button>
                 </li>
                 <li>
-                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                  <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
                     <Image
                       src="/images/car.png"
                       fill={true}
@@ -189,7 +189,7 @@ export default function Home() {
                   </button>
                 </li>
                 <li>
-                  <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2">
+                  <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
                     <Image
                       src="/images/car.png"
                       fill={true}
