@@ -15,12 +15,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { MoveLeft, MoveRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       {/* Sticky Header */}
-      <header className="container py-[18px]">
+      <header className="container mb-6 px-20 py-[18px]">
         {/* Desktop Menu */}
         <section className="flex justify-between">
           {/* Left */}
@@ -114,12 +115,48 @@ export default function Home() {
           </div>
         </section>
       </header>
-      {/* <main>
-        <h1>Main Content</h1>
+
+      {/* Main */}
+      <main className="container mt-16 flex">
+        {/* Car Carousel */}
+        <section className="max-w-[942px] basis-3/5">
+          {/* Carousel */}
+          <div className="flex flex-col">
+            {/* Preview and Navigation */}
+            <div className="mb-16 flex items-center gap-12">
+              {/* Navigation Left */}
+              <div>
+                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all duration-200 hover:bg-[#0036C3] hover:opacity-85">
+                  <MoveLeft className="text-[#0036C3] hover:text-[#DDFFF7]" />
+                </button>
+              </div>
+
+              {/* Car Preview */}
+              <div>
+                <Image
+                  src="/images/car.png"
+                  alt="Car"
+                  width={678}
+                  height={387}
+                />
+              </div>
+
+              {/* Navigation Right */}
+              <div>
+                <button className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all duration-200 hover:bg-[#0036C3] hover:opacity-85">
+                  <MoveRight className="text-[#0036C3] hover:text-[#DDFFF7]" />
+                </button>
+              </div>
+            </div>
+
+            {/* Variants of the car images */}
+            <div>Different Car images</div>
+          </div>
+        </section>
+
+        {/* Car Details */}
+        <section className="basis-2/5 pl-11">Car Details</section>
       </main>
-      <footer>
-        <h1>Footer</h1>
-      </footer> */}
     </>
   );
 }
