@@ -37,7 +37,7 @@ export default function Home() {
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex">
-                <div className="relative py-2 pr-8 font-bold text-black before:absolute before:right-2 before:translate-y-1 before:rotate-45 before:border-[5px] before:border-solid before:border-black before:border-l-transparent before:border-t-transparent before:bg-transparent">
+                <div className="relative py-2 pr-8 font-bold text-primary before:absolute before:right-2 before:translate-y-1 before:rotate-45 before:border-[5px] before:border-solid before:border-black before:border-l-transparent before:border-t-transparent before:bg-transparent hover:opacity-80">
                   <span className="mr-2 inline-block">Find EV Cars</span>
                 </div>
               </DropdownMenuTrigger>
@@ -51,7 +51,7 @@ export default function Home() {
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex">
-                <div className="relative py-2 pr-8 font-bold text-black before:absolute before:right-2 before:translate-y-1 before:rotate-45 before:border-[5px] before:border-solid before:border-black before:border-l-transparent before:border-t-transparent before:bg-transparent">
+                <div className="relative py-2 pr-8 font-bold text-black before:absolute before:right-2 before:translate-y-1 before:rotate-45 before:border-[5px] before:border-solid before:border-black before:border-l-transparent before:border-t-transparent before:bg-transparent hover:opacity-80">
                   <span className="mr-2 inline-block">EV Guides</span>
                 </div>
               </DropdownMenuTrigger>
@@ -69,7 +69,10 @@ export default function Home() {
           <div className="flex items-center gap-8">
             {/* Select Language */}
             <Select defaultValue="sg">
-              <SelectTrigger className="w-[76px]" aria-label="language">
+              <SelectTrigger
+                className="relative w-[76px] before:absolute before:right-2 before:-translate-y-1 before:rotate-45 before:border-[5px] before:border-solid before:border-black before:border-l-transparent before:border-t-transparent before:bg-transparent"
+                aria-label="language"
+              >
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -79,7 +82,7 @@ export default function Home() {
                     width={28}
                     height={18}
                     alt="Flag"
-                    className="border-2"
+                    className="border-2 border-border"
                   ></Image>
                 </SelectItem>
                 <SelectItem value="sg">
@@ -88,7 +91,7 @@ export default function Home() {
                     width={28}
                     height={18}
                     alt="Flag"
-                    className="border-2"
+                    className="border-2 border-border"
                   ></Image>
                 </SelectItem>
                 <SelectItem value="ae">
@@ -97,12 +100,15 @@ export default function Home() {
                     width={28}
                     height={18}
                     alt="Flag"
-                    className="border-2"
+                    className="border-2 border-border"
                   ></Image>
                 </SelectItem>
               </SelectContent>
             </Select>
-            <Link href="#" className="font-bold">
+            <Link
+              href="#"
+              className="py-2 font-bold text-black hover:opacity-80"
+            >
               Log In / Sign Up
             </Link>
           </div>
