@@ -234,7 +234,43 @@ export default function Home() {
 
           <h5 className="mb-6 text-2xl">$41,103</h5>
 
-          <hr className="text-[#BDBDBD]" />
+          <hr className="mb-6 text-[#BDBDBD]" />
+
+          {/* color */}
+          <div className="mb-16 p-1">
+            <p className="mb-[18px] font-semibold">Color</p>
+            <div className="flex items-center justify-between">
+              {/* Select Colors */}
+              <div className="flex justify-between gap-4">
+                <button className="h-7 w-7 rounded-full bg-primary hover:opacity-80"></button>
+                <button className="h-7 w-7 rounded-full bg-destructive hover:opacity-80"></button>
+                <button className="h-7 w-7 rounded-full bg-[#0036C3] hover:opacity-80"></button>
+                <button className="h-7 w-7 rounded-full border-2 bg-white outline outline-1 outline-[#E0E0E0] ring-1 ring-[#00F3B9] ring-offset-4 hover:opacity-80"></button>
+              </div>
+
+              <p className="text-xs font-semibold text-black">SILVER</p>
+            </div>
+          </div>
+
+          {/* Order Now Button */}
+          <button className="duration-400 mb-6 h-[62px] w-full items-center rounded-sm bg-[#0036C3] font-semibold text-[#00F3B9] transition-all hover:opacity-80">
+            Order Now
+          </button>
+          <p className="mb-[72px] text-center text-black opacity-35">
+            Estimated within 16 Aug – 23 Aug
+          </p>
+
+          <h5 className="mb-6 text-2xl">
+            Tesla believes in accelerating the world's transition to sustainable
+            energy with electric cars.
+          </h5>
+
+          <Link
+            href="#"
+            className="mb-10 inline-block text-[#0036C3] underline"
+          >
+            View the Tesla collection
+          </Link>
         </section>
       </main>
     </>
