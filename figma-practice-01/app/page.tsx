@@ -15,7 +15,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MoveLeft, MoveRight, Star } from "lucide-react";
+import { Minus, MoveLeft, MoveRight, Star } from "lucide-react";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -117,7 +124,7 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="container mt-16 grid grid-cols-3 bg-[#FBFCFE]">
+      <main className="container mb-20 mt-16 grid grid-cols-3 bg-[#FBFCFE]">
         {/* Car Carousel */}
         <section className="col-span-2 max-w-[942px] ">
           {/* Carousel */}
@@ -271,6 +278,37 @@ export default function Home() {
           >
             View the Tesla collection
           </Link>
+
+          {/* Accordian */}
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" className="border-t-[1px]">
+              <AccordionTrigger>Description</AccordionTrigger>
+              <AccordionContent>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis totam ducimus libero, veritatis facere architecto.
+                Maxime aperiam, corrupti labore similique, iure repudiandae quas
+                dolores in natus quasi temporibus nihil suscipit.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Product Highlights</AccordionTrigger>
+              <AccordionContent>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis totam ducimus libero, veritatis facere architecto.
+                Maxime aperiam, corrupti labore similique, iure repudiandae quas
+                dolores in natus quasi temporibus nihil suscipit.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Delivery & Warranty</AccordionTrigger>
+              <AccordionContent>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis totam ducimus libero, veritatis facere architecto.
+                Maxime aperiam, corrupti labore similique, iure repudiandae quas
+                dolores in natus quasi temporibus nihil suscipit.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
       </main>
     </>
