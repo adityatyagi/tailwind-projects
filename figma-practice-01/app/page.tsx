@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MoveLeft, MoveRight } from "lucide-react";
+import { MoveLeft, MoveRight, Star } from "lucide-react";
 
 export default function Home() {
   return (
@@ -117,17 +117,17 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="container mt-16 flex bg-[#FBFCFE]">
+      <main className="container mt-16 grid grid-cols-3 bg-[#FBFCFE]">
         {/* Car Carousel */}
-        <section className="max-w-[942px] basis-3/5">
+        <section className="col-span-2 max-w-[942px] ">
           {/* Carousel */}
           <div className="flex flex-col">
             {/* Preview and Navigation */}
             <div className="mb-16 flex items-center gap-12">
               {/* Navigation Left */}
               <div>
-                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all hover:bg-[#0036C3] hover:opacity-85">
-                  <MoveLeft className="text-[#0036C3] hover:text-[#DDFFF7]" />
+                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-[#DDFFF7] hover:opacity-85">
+                  <MoveLeft />
                 </button>
               </div>
 
@@ -143,14 +143,14 @@ export default function Home() {
 
               {/* Navigation Right */}
               <div>
-                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] transition-all hover:bg-[#0036C3] hover:opacity-85">
-                  <MoveRight className="text-[#0036C3] hover:text-[#DDFFF7]" />
+                <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-[#DDFFF7] hover:opacity-85">
+                  <MoveRight />
                 </button>
               </div>
             </div>
 
             {/* Variants of the car images */}
-            <div className="text-center">
+            <div className="mx-auto text-center">
               <ul className="flex w-fit gap-4">
                 <li>
                   <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
@@ -206,7 +206,36 @@ export default function Home() {
         </section>
 
         {/* Car Details */}
-        <section className="basis-2/5 pl-11">Car Details</section>
+        <section className="pl-11">
+          {/* Pill */}
+          <div className="mb-2">
+            <span className="rounded-[64px] bg-[#DDFFF7] px-3 py-2 font-bold text-[#0036C3]">
+              NEW
+            </span>
+          </div>
+
+          {/* Car Name */}
+          <h4 className="mb-2 text-[34px] font-semibold">2021 Tesla Model 3</h4>
+
+          {/* Car VIN and Model */}
+          <div className="mb-4 flex gap-4">
+            <span className="text-black opacity-35">VIN</span>
+            <span className="text-black">JN1AZ0CPOBT009448</span>
+          </div>
+
+          {/* Rating */}
+          <div className="mb-6 flex gap-1">
+            <Star className="fill-[#FFB400] stroke-[#FFB400]" />
+            <Star className="fill-[#FFB400] stroke-[#FFB400]" />
+            <Star className="fill-[#FFB400] stroke-[#FFB400]" />
+            <Star className="fill-[#FFB400] stroke-[#FFB400]" />
+            <Star className="fill-[#FFB400] stroke-[#FFB400]" />
+          </div>
+
+          <h5 className="mb-6 text-2xl">$41,103</h5>
+
+          <hr className="text-[#BDBDBD]" />
+        </section>
       </main>
     </>
   );
