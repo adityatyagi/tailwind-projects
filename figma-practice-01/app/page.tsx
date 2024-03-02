@@ -15,7 +15,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Minus, MoveLeft, MoveRight, Star } from "lucide-react";
+import {
+  Antenna,
+  Fuel,
+  FuelIcon,
+  Gauge,
+  Minus,
+  MoveLeft,
+  MoveRight,
+  Star,
+  Thermometer,
+} from "lucide-react";
 
 import {
   Accordion,
@@ -124,7 +134,7 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="container mb-20 mt-16 grid grid-cols-3 bg-[#FBFCFE]">
+      <main className="container mt-16 grid grid-cols-3 bg-[#FBFCFE]">
         {/* Car Carousel */}
         <section className="col-span-2 max-w-[942px] ">
           {/* Carousel */}
@@ -213,7 +223,7 @@ export default function Home() {
         </section>
 
         {/* Car Details */}
-        <section className="pl-11">
+        <section className="mb-[74px] pl-11">
           {/* Pill */}
           <div className="mb-2">
             <span className="rounded-[64px] bg-[#DDFFF7] px-3 py-2 font-bold text-[#0036C3]">
@@ -311,6 +321,180 @@ export default function Home() {
           </Accordion>
         </section>
       </main>
+
+      {/* Abut this car */}
+      <section className="container mb-14 py-14">
+        <h4 className="mb-[42px] text-4xl font-semibold text-black">
+          About this car
+        </h4>
+
+        <ul className="flex gap-[120px]">
+          <li className="flex gap-6">
+            <FuelIcon className="text-[#0036C3]" />
+            <span className="text-xl text-black opacity-[87%]">
+              Diesel Fuel
+            </span>
+          </li>
+          <li className="flex gap-6">
+            <Antenna className="text-[#0036C3]" />
+            <span className="text-xl text-black opacity-[87%]">
+              Automatic Transmission
+            </span>
+          </li>
+          <li className="flex gap-6">
+            <Gauge className="text-[#0036C3]" />
+            <span className="text-xl text-black opacity-[87%]">
+              11,594 Miles
+            </span>
+          </li>
+          <li className="flex gap-6">
+            <Thermometer className="text-[#0036C3]" />
+            <span className="text-xl text-black opacity-[87%]">
+              3.5L Displacement
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section className="container mb-[70px]">
+        <h4 className="mb-[42px] text-4xl font-semibold text-black">
+          Specifications
+        </h4>
+
+        <div className="flex justify-between">
+          {/* Exterior */}
+          <div>
+            <h6 className="mb-4 text-xl font-semibold">Exterior</h6>
+            <table className="border-separate">
+              <tbody className="-mx-10 -my-2 block border-spacing-x-10 border-spacing-y-2">
+                <tr>
+                  <td className="text-xl opacity-[87%]">Body Style</td>
+                  <td className="text-xl opacity-[87%]">Hatchback</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Exterior Colour</td>
+                  <td className="text-xl opacity-[87%]">Blue</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Length</td>
+                  <td className="text-xl opacity-[87%]">175''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Wheelbase</td>
+                  <td className="text-xl opacity-[87%]">106''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Width</td>
+                  <td className="text-xl opacity-[87%]">69.7''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Full Width</td>
+                  <td className="text-xl opacity-[87%]">NA</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Clearance</td>
+                  <td className="text-xl opacity-[87%]">6''</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Interior */}
+          <div>
+            <h6 className="mb-4 text-xl font-semibold">Interior</h6>
+            <table className="mb-6 border-separate">
+              <tbody className="-mx-10 -my-2 block border-spacing-x-10 border-spacing-y-2">
+                <tr>
+                  <td className="text-xl opacity-[87%]">Seating</td>
+                  <td className="text-xl opacity-[87%]">5 Adults</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Interior Colour</td>
+                  <td className="text-xl opacity-[87%]">NA</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Head Room Front</td>
+                  <td className="text-xl opacity-[87%]">41''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Head Room Rear</td>
+                  <td className="text-xl opacity-[87%]">37''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Leg Room Front</td>
+                  <td className="text-xl opacity-[87%]">42''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Leg Room Rear</td>
+                  <td className="text-xl opacity-[87%]">33''</td>
+                </tr>
+                <tr>
+                  <td className="text-xl opacity-[87%]">Shoulder Room Front</td>
+                  <td className="text-xl opacity-[87%]">54''</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <Link href="#" className="flex items-center text-sm text-[#0036C3]">
+              Show More <MoveRight className="ml-2 text-sm" />
+            </Link>
+          </div>
+
+          {/* Performance and Charging */}
+          <div className="flex flex-col">
+            <div className="mb-14">
+              <h6 className="mb-4 text-xl font-semibold">BEV Performance</h6>
+              <table className="mb-6 border-separate">
+                <tbody className="-mx-10 -my-2 block border-spacing-x-10 border-spacing-y-2">
+                  <tr>
+                    <td className="text-xl opacity-[87%]">Horsepower</td>
+                    <td className="text-xl opacity-[87%]">107 hp</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xl opacity-[87%]">MPGe</td>
+                    <td className="text-xl opacity-[87%]">102</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xl opacity-[87%]">Top Speed</td>
+                    <td className="text-xl opacity-[87%]">90 mph</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mb-14">
+              <h6 className="mb-4 text-xl font-semibold">Charging</h6>
+              <table className="mb-6 border-separate">
+                <tbody className="-mx-10 -my-2 block border-spacing-x-10 border-spacing-y-2">
+                  <tr>
+                    <td className="text-xl opacity-[87%]">Electric Range</td>
+                    <td className="text-xl opacity-[87%]">73 Mi.</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xl opacity-[87%]">Battery Size</td>
+                    <td className="text-xl opacity-[87%]">24 kWh</td>
+                  </tr>
+                  <tr>
+                    <td className="text-xl opacity-[87%]">
+                      Cost to charge (full)
+                    </td>
+                    <td className="text-xl opacity-[87%]">$2.50</td>
+                  </tr>
+                </tbody>
+              </table>
+              <Link href="#" className="flex text-sm text-[#0036C3] underline">
+                Show More
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <button className="h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3]">
+            Show all specifications
+          </button>
+        </div>
+      </section>
     </>
   );
 }
