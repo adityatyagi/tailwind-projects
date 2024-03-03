@@ -17,11 +17,8 @@ import {
 } from "@/components/ui/select";
 import {
   Antenna,
-  Fuel,
   FuelIcon,
   Gauge,
-  Minus,
-  MoveLeft,
   MoveRight,
   Star,
   Thermometer,
@@ -33,6 +30,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
   return (
@@ -139,88 +137,7 @@ export default function Home() {
           {/* Car Carousel */}
           <section className="col-span-2">
             {/* Carousel */}
-            <div className="flex flex-col">
-              {/* Preview and Navigation */}
-              <div className="mb-16 flex items-center gap-12">
-                {/* Navigation Left */}
-                <div>
-                  <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-[#DDFFF7] hover:opacity-85">
-                    <MoveLeft />
-                  </button>
-                </div>
-
-                {/* Car Preview */}
-                <div>
-                  <Image
-                    src="/images/car.png"
-                    alt="Car"
-                    width={678}
-                    height={387}
-                  />
-                </div>
-
-                {/* Navigation Right */}
-                <div>
-                  <button className="duration-400 flex h-9 w-9 items-center justify-center rounded-full bg-[#DDFFF7] text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-[#DDFFF7] hover:opacity-85">
-                    <MoveRight />
-                  </button>
-                </div>
-              </div>
-
-              {/* Variants of the car images */}
-              <div className="mx-auto text-center">
-                <ul className="flex w-fit gap-4">
-                  <li>
-                    <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
-                      <Image
-                        src="/images/car.png"
-                        fill={true}
-                        style={{
-                          objectFit: "contain",
-                        }}
-                        alt="preview"
-                      />
-                    </button>
-                  </li>
-                  <li>
-                    <button className="relative flex h-[79px] w-[89px] items-center rounded-sm border-2 border-[#00F3B9]">
-                      <Image
-                        src="/images/car.png"
-                        fill={true}
-                        style={{
-                          objectFit: "contain",
-                        }}
-                        alt="preview"
-                      />
-                    </button>
-                  </li>
-                  <li>
-                    <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
-                      <Image
-                        src="/images/car.png"
-                        fill={true}
-                        style={{
-                          objectFit: "contain",
-                        }}
-                        alt="preview"
-                      />
-                    </button>
-                  </li>
-                  <li>
-                    <button className="after:duration-400 relative flex h-[79px] w-[89px] items-center rounded-sm border-2	bg-blend-normal after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-b after:from-[#F5F5F5] after:to-[#F5F5F5] after:opacity-90 after:transition-all hover:after:opacity-0">
-                      <Image
-                        src="/images/car.png"
-                        fill={true}
-                        style={{
-                          objectFit: "contain",
-                        }}
-                        alt="preview"
-                      />
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <Carousel />
           </section>
 
           {/* Car Details */}
@@ -441,9 +358,10 @@ export default function Home() {
 
                 <Link
                   href="#"
-                  className="flex items-center text-sm text-[#0036C3]"
+                  className="group flex items-center text-sm text-[#0036C3]"
                 >
-                  Show More <MoveRight className="ml-2 text-sm" />
+                  Show More{" "}
+                  <MoveRight className="duration-400 ml-2 text-sm transition-all group-hover:translate-x-1" />
                 </Link>
               </div>
 
@@ -508,7 +426,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <button className="h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3]">
+              <button className="duration-400 h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-white">
                 Show all specifications
               </button>
             </div>
