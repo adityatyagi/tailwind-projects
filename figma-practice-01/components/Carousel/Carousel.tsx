@@ -107,6 +107,7 @@ const Carousel = () => {
               style={{
                 objectFit: "contain",
               }}
+              sizes="(max-width: 1400px) 678px"
             />
           ) : (
             // Skeleton loaders for heavy image
@@ -152,6 +153,7 @@ const Carousel = () => {
                       objectFit: "contain",
                     }}
                     alt="preview"
+                    sizes="(max-width: 1400px) 89px"
                   />
                 </button>
               </li>
