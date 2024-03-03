@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <header
       className={clsx(
-        "duration-400 fixed z-30 mb-6 w-full py-[18px] transition ease-in-out ",
+        "duration-400 fixed z-30 mb-6 w-full bg-white py-[18px] transition ease-in-out",
         { "bg-white shadow-lg": !top },
       )}
     >

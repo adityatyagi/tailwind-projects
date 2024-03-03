@@ -26,10 +26,10 @@ export default function Home() {
       <Header />
 
       {/* Main */}
-      <main className="container pt-24">
-        <div className="grid min-h-screen grid-cols-3 gap-y-[74px] bg-[#FBFCFE]">
+      <main className="container bg-[#FBFCFE] pt-24">
+        <div className="grid min-h-screen grid-cols-3 gap-y-[74px]">
           {/* Car Carousel */}
-          <section className="col-span-2">
+          <section className="bg-red col-span-2">
             {/* Carousel */}
             <div className="flex flex-col">
               {/* Preview and Navigation */}
@@ -120,7 +120,7 @@ export default function Home() {
           </section>
 
           {/* Car Details */}
-          <section className="bg-white pl-11">
+          <section className="bg-white px-11">
             {/* Pill */}
             <div className="mb-2">
               <span className="rounded-[64px] bg-[#DDFFF7] px-3 py-2 font-bold text-[#0036C3]">
@@ -189,7 +189,7 @@ export default function Home() {
             </Link>
 
             {/* Accordian */}
-            <Accordion type="single" collapsible className="pb-[74px]">
+            <Accordion type="single" collapsible className="pb-[38px]">
               <AccordionItem value="item-1" className="border-t-[1px]">
                 <AccordionTrigger>Description</AccordionTrigger>
                 <AccordionContent>
@@ -221,7 +221,7 @@ export default function Home() {
           </section>
 
           {/* About this car */}
-          <section className="col-span-3 mb-14 py-14">
+          <section className="col-span-3 pb-[38px]">
             <h4 className="mb-[42px] text-4xl font-semibold text-black">
               About this car
             </h4>
