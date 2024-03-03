@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Screenshot
 
-![Screenshot](/readme-assets/screenshot.png)
+![Screenshot](./readme-assets/screenshot.png)
 
 ## Learn More
 
