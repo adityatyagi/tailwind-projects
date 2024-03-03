@@ -17,10 +17,8 @@ import {
 } from "@/components/ui/select";
 import {
   Antenna,
-  Fuel,
   FuelIcon,
   Gauge,
-  Minus,
   MoveLeft,
   MoveRight,
   Star,
@@ -50,6 +48,7 @@ export default function Home() {
                 alt="Branding Logo"
                 width={153}
                 height={28}
+                aria-label="EVFY"
               ></Image>
             </Link>
 
@@ -83,7 +82,6 @@ export default function Home() {
           </div>
 
           {/* Right */}
-          {/*TODO: https://www.npmjs.com/package/react-flags-select */}
           <div className="flex items-center gap-8">
             {/* Select Language */}
             <Select defaultValue="sg">
@@ -179,6 +177,7 @@ export default function Home() {
                           objectFit: "contain",
                         }}
                         alt="preview"
+                        sizes="(max-width: 1400px) 33vw"
                       />
                     </button>
                   </li>
@@ -191,6 +190,7 @@ export default function Home() {
                           objectFit: "contain",
                         }}
                         alt="preview"
+                        sizes="(max-width: 1400px) 33vw"
                       />
                     </button>
                   </li>
@@ -203,6 +203,7 @@ export default function Home() {
                           objectFit: "contain",
                         }}
                         alt="preview"
+                        sizes="(max-width: 1400px) 33vw"
                       />
                     </button>
                   </li>
@@ -215,6 +216,7 @@ export default function Home() {
                           objectFit: "contain",
                         }}
                         alt="preview"
+                        sizes="(max-width: 1200px) 33vw"
                       />
                     </button>
                   </li>
@@ -441,9 +443,10 @@ export default function Home() {
 
                 <Link
                   href="#"
-                  className="flex items-center text-sm text-[#0036C3]"
+                  className="group flex items-center text-sm text-[#0036C3]"
                 >
-                  Show More <MoveRight className="ml-2 text-sm" />
+                  Show More{" "}
+                  <MoveRight className="duration-400 ml-2 text-sm transition-all group-hover:translate-x-1" />
                 </Link>
               </div>
 
@@ -508,7 +511,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <button className="h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3]">
+              <button className="duration-400 h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-white">
                 Show all specifications
               </button>
             </div>
