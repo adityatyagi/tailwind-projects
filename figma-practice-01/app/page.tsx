@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/accordion";
 import Carousel from "@/components/Carousel";
 import Header from "@/components/Header/Header.component";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
@@ -84,9 +85,9 @@ export default function Home() {
             </div>
 
             {/* Order Now Button */}
-            <button className="duration-400 mb-6 h-[62px] w-full items-center rounded-sm bg-[#0036C3] font-semibold text-[#00F3B9] transition-all hover:opacity-80">
+            <Button intent="primary" className="mb-6 w-full">
               Order Now
-            </button>
+            </Button>
             <p className="mb-[72px] text-center text-black opacity-35">
               Estimated within 16 Aug – 23 Aug
             </p>
@@ -320,9 +321,9 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <button className="duration-400 h-16 w-72 border-[1px] border-[#0036C3] text-center font-semibold text-[#0036C3] transition-all hover:bg-[#0036C3] hover:text-white">
+              <Button intent="secondary" className="w-[280px]">
                 Show all specifications
-              </button>
+              </Button>
             </div>
           </section>
         </div>
